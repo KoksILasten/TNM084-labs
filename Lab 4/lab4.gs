@@ -78,8 +78,8 @@ vec3 calcNormal(vec3 p) {
 // Using small steps along these, find three points around the vertex.
 // Use these three, the “triangle method”, for finding the new normal.
 
-    float delta = 1e-3; //distance to neighbors
-
+    float delta = 1e-3; //distance to neighbors offset
+ 
     vec3 v1 = normalize(cross(p, vec3(1, 0, 0)));
 
     if(v1 == vec3(0, 0, 0)) {
