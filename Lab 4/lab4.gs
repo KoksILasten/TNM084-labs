@@ -80,17 +80,6 @@ vec3 calcNormal(vec3 p) {
 
     float delta = 1e-3; //distance to neighbors
 
-    // vec3 p1 = p + vec3(delta, 0.0, 0.0);
-    // vec3 p2 = p + vec3(0.0, delta, 0.0);
-    // vec3 p3 = p + vec3(0.0, 0.0, delta);
-
-    // float h1 = cumFBM(p1);
-    // float h2 = cumFBM(p2);
-    // float h3 = cumFBM(p3);
-
-    // vec3 normal = normalize(vec3(h1 - cumFBM(p), h2 - cumFBM(p), h3 - cumFBM(p)));
-    // return normal;
-
     vec3 v1 = normalize(cross(p, vec3(1, 0, 0)));
 
     if(v1 == vec3(0, 0, 0)) {
